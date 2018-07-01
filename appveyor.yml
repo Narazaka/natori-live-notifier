@@ -8,7 +8,7 @@ install:
   - npm --version
   - npm install
   - npm run build
-  - Compress-Archive -Path . -DestinationPath natori-live-notifier.zip
+  - ps: Compress-Archive -Path . -DestinationPath natori-live-notifier.zip
 build: off
 deploy: off
 environment:
