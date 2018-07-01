@@ -2,16 +2,14 @@ import { DetectYoutubeLive } from "./detectYoutubeLive";
 import opn = require("opn");
 import { genTray } from "./tray";
 import * as notifier from "node-notifier";
-
-const url = "https://www.youtube.com/channel/UCIdEIHpS0TdkqRkHL5OkLtA/videos?view=2";
-const intervalSec = 30;
+import setting = require("./setting.json");
 
 const wait = (sec: number) => new Promise<void>((resolve) => setTimeout(resolve, sec * 1000));
 
 const openedUrls: {[url: string]: boolean} = {};
 
 async function main() {
-    const detect = new DetectYoutubeLive(url);
+    const detect = new DetectYoutubeLive(setting.url);
     await detect.start();
     try {
         while (true) {
@@ -27,7 +25,7 @@ async function main() {
                     openedUrls[liveUrl] = true;
                 }
             }
-            await wait(intervalSec);
+            await wait(setting.intervalSec);
         }
     } catch (e) {
         try {
