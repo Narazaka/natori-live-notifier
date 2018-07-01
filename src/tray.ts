@@ -1,5 +1,6 @@
 import SysTray from "systray";
 import * as fs from "fs";
+import * as path from "path";
 
 export interface AppActions {
     close(): void;
@@ -8,7 +9,7 @@ export interface AppActions {
 export function genTray(appActions: AppActions) {
     const systray = new SysTray({
         menu: {
-            icon: fs.readFileSync("rc/nasu.ico").toString("base64"),
+            icon: fs.readFileSync(path.join(__dirname, "..", "rc/nasu.ico")).toString("base64"),
             title: "ライブ名取",
             tooltip: "名取のライブが始まったらブラウザを開きます",
             items: [

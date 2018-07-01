@@ -2,7 +2,7 @@ import { DetectYoutubeLive } from "./detectYoutubeLive";
 import opn = require("opn");
 import { genTray } from "./tray";
 import * as notifier from "node-notifier";
-import setting = require("./setting.json");
+import setting = require("../setting.json");
 
 const wait = (sec: number) => new Promise<void>((resolve) => setTimeout(resolve, sec * 1000));
 
