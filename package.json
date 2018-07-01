@@ -1,0 +1,23 @@
+{
+  "name": "natori-live-notifier",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "narazaka",
+  "license": "Zlib",
+  "dependencies": {
+    "@types/node-notifier": "0.0.28",
+    "@types/opn": "^5.1.0",
+    "@types/puppeteer": "^1.5.0",
+    "node-notifier": "^5.2.1",
+    "opn": "^5.3.0",
+    "puppeteer": "^1.5.0",
+    "systray": "^1.0.5",
+    "ts-node": "^7.0.0",
+    "typescript": "^2.9.2"
+  }
+}
