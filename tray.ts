@@ -8,7 +8,7 @@ export interface AppActions {
 export function genTray(appActions: AppActions) {
     const systray = new SysTray({
         menu: {
-            icon: fs.readFileSync("nasu.ico").toString("base64"),
+            icon: fs.readFileSync("rc/nasu.ico").toString("base64"),
             title: "ライブ名取",
             tooltip: "名取のライブが始まったらブラウザを開きます",
             items: [
